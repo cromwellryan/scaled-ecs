@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  webapp:
+    image: cromwellryan/scaled-ecs:latest
+    ports:
+      - "80:80"
+    deploy:
+      replicas: 2
+    volumes:
+      - state:/state
+
+volumes:
+  state:
